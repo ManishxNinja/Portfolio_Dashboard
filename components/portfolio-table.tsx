@@ -37,17 +37,17 @@ export function PortfolioTable({ data, isLoading = false }: PortfolioTableProps)
       <Table>
         <TableHeader>
           <TableRow className="bg-secondary/50 hover:bg-secondary/50">
-            <TableHead className="font-semibold">Stock</TableHead>
-            <TableHead className="text-right font-semibold">Purchase Price</TableHead>
-            <TableHead className="text-right font-semibold">Qty</TableHead>
-            <TableHead className="text-right font-semibold">Investment</TableHead>
-            <TableHead className="text-right font-semibold">Portfolio %</TableHead>
-            <TableHead className="font-semibold">Exchange</TableHead>
-            <TableHead className="text-right font-semibold">CMP</TableHead>
-            <TableHead className="text-right font-semibold">Present Value</TableHead>
-            <TableHead className="text-right font-semibold">Gain/Loss</TableHead>
-            <TableHead className="text-right font-semibold">P/E Ratio</TableHead>
-            <TableHead className="text-right font-semibold">Latest Earnings</TableHead>
+            <TableHead className="font-semibold whitespace-nowrap">Stock</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Buy Price</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Qty</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Investment</TableHead>
+            <TableHead className="text-center font-semibold whitespace-nowrap">Portfolio %</TableHead>
+            <TableHead className="text-center font-semibold whitespace-nowrap">Exchange</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">CMP</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Present Value</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Gain/Loss</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">P/E Ratio</TableHead>
+            <TableHead className="text-right font-semibold whitespace-nowrap">Earnings (EPS)</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -73,12 +73,12 @@ export function PortfolioTable({ data, isLoading = false }: PortfolioTableProps)
                 <TableCell className="text-right">₹{stock.purchasePrice.toFixed(2)}</TableCell>
                 <TableCell className="text-right">{stock.quantity}</TableCell>
                 <TableCell className="text-right">₹{investment.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</TableCell>
-                <TableCell className="text-right">
+                <TableCell className="text-center">
                   <Badge variant="outline" className="font-mono">
                     {portfolioPercent.toFixed(2)}%
                   </Badge>
                 </TableCell>
-                <TableCell>
+                <TableCell className="text-center">
                   <Badge variant="secondary" className="font-mono">
                     {stock.exchange}
                   </Badge>
