@@ -2,6 +2,7 @@ export interface Stock {
   id: string;
   symbol: string;
   yahooSymbol: string;
+  googleSymbol: string;
   name: string;
   purchasePrice: number;
   quantity: number;
@@ -16,14 +17,14 @@ export interface StockData extends Stock {
 }
 
 export const mockPortfolio: Stock[] = [
-  { id: '1', symbol: 'RELIANCE', yahooSymbol: 'RELIANCE.NS', name: 'Reliance Industries', purchasePrice: 2800, quantity: 5, exchange: 'NSE', sector: 'Financials' },
-  { id: '2', symbol: 'TCS', yahooSymbol: 'TCS.NS', name: 'Tata Consultancy Services', purchasePrice: 3500, quantity: 10, exchange: 'NSE', sector: 'Technology' },
-  { id: '3', symbol: 'INFY', yahooSymbol: 'INFY.NS', name: 'Infosys', purchasePrice: 1800, quantity: 8, exchange: 'NSE', sector: 'Technology' },
-  { id: '4', symbol: 'HDFC', yahooSymbol: 'HDFCBANK.NS', name: 'HDFC Bank', purchasePrice: 1600, quantity: 12, exchange: 'NSE', sector: 'Financials' },
-  { id: '5', symbol: 'WIPRO', yahooSymbol: 'WIPRO.NS', name: 'Wipro', purchasePrice: 450, quantity: 20, exchange: 'NSE', sector: 'Technology' },
-  { id: '6', symbol: 'MARUTI', yahooSymbol: 'MARUTI.NS', name: 'Maruti Suzuki', purchasePrice: 9500, quantity: 2, exchange: 'NSE', sector: 'Automotive' },
-  { id: '7', symbol: 'ICICIBANK', yahooSymbol: 'ICICIBANK.NS', name: 'ICICI Bank', purchasePrice: 1250, quantity: 15, exchange: 'NSE', sector: 'Financials' },
-  { id: '8', symbol: 'ADANIPORTS', yahooSymbol: 'ADANIPORTS.NS', name: 'Adani Ports', purchasePrice: 650, quantity: 30, exchange: 'NSE', sector: 'Infrastructure' },
+  { id: '1', symbol: 'RELIANCE', yahooSymbol: 'RELIANCE.NS', googleSymbol: 'RELIANCE', name: 'Reliance Industries', purchasePrice: 2800, quantity: 5, exchange: 'NSE', sector: 'Financials' },
+  { id: '2', symbol: 'TCS', yahooSymbol: 'TCS.NS', googleSymbol: 'TCS', name: 'Tata Consultancy Services', purchasePrice: 3500, quantity: 10, exchange: 'NSE', sector: 'Technology' },
+  { id: '3', symbol: 'INFY', yahooSymbol: 'INFY.NS', googleSymbol: 'INFY', name: 'Infosys', purchasePrice: 1800, quantity: 8, exchange: 'NSE', sector: 'Technology' },
+  { id: '4', symbol: 'HDFC', yahooSymbol: 'HDFCBANK.NS', googleSymbol: 'HDFCBANK', name: 'HDFC Bank', purchasePrice: 1600, quantity: 12, exchange: 'NSE', sector: 'Financials' },
+  { id: '5', symbol: 'WIPRO', yahooSymbol: 'WIPRO.NS', googleSymbol: 'WIPRO', name: 'Wipro', purchasePrice: 450, quantity: 20, exchange: 'NSE', sector: 'Technology' },
+  { id: '6', symbol: 'MARUTI', yahooSymbol: 'MARUTI.NS', googleSymbol: 'MARUTI', name: 'Maruti Suzuki', purchasePrice: 9500, quantity: 2, exchange: 'NSE', sector: 'Automotive' },
+  { id: '7', symbol: 'ICICIBANK', yahooSymbol: 'ICICIBANK.NS', googleSymbol: 'ICICIBANK', name: 'ICICI Bank', purchasePrice: 1250, quantity: 15, exchange: 'NSE', sector: 'Financials' },
+  { id: '8', symbol: 'ADANIPORTS', yahooSymbol: 'ADANIPORTS.NS', googleSymbol: 'ADANIPORTS', name: 'Adani Ports', purchasePrice: 650, quantity: 30, exchange: 'NSE', sector: 'Infrastructure' },
 ];
 
 export const getMockStockData = (stock: Stock): StockData => {

@@ -15,7 +15,11 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
-  const [dataSource, setDataSource] = useState<string>('');
+  const [dataSource, setDataSource] = useState<{
+    cmp: string;
+    peRatio: string;
+    earnings: string;
+  } | null>(null);
 
   const fetchPortfolioData = async () => {
     try {
@@ -140,10 +144,16 @@ export default function DashboardPage() {
 
         <div className="bg-secondary/50 border border-border rounded-lg p-4 mt-8">
           <p className="text-xs text-muted-foreground">
-            <strong>Data Source:</strong>{' '}
-            {dataSource === 'yahoo-finance'
-              ? 'Live data from Yahoo Finance. Prices may be delayed by up to 15 minutes.'
-              : 'Using mock data. Yahoo Finance API may be unavailable.'}
+            <strong>Data Sources:</strong>{' '}
+            {dataSource ? (
+              <>
+                CMP from <strong>{dataSource.cmp}</strong> | P/E Ratio from{' '}
+                <strong>{dataSource.peRatio}</strong> | Earnings from{' '}
+                <strong>{dataSource.earnings}</strong>
+              </>
+            ) : (
+              'Loading...'
+            )}
           </p>
         </div>
       </main>
