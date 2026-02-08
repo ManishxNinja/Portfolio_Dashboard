@@ -65,7 +65,7 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-foreground">
-                Portfolio Dashboard
+                Manish&apos;s Portfolio Dashboard
               </h1>
               <p className="text-sm text-muted-foreground mt-1">
                 Real-time investment tracking and analysis
